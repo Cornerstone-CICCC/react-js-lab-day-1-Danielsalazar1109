@@ -57,7 +57,7 @@ const Profile: React.FC<ProfileProps> = ({ user, onUpdate, onDelete }) => {
 
   return (
     <div>
-      <h2>Perfil de {user.fullname}</h2>
+      <h2> {user.fullname} Profile</h2>
 
       {isEditing ? (
         <>
@@ -129,11 +129,11 @@ const Profile: React.FC<ProfileProps> = ({ user, onUpdate, onDelete }) => {
         </>
       ) : (
         <>
-          <p><strong>Edad:</strong> {user.age || "No specified"}</p>
-          <p><strong>Educación:</strong> {user.education}</p>
-          <p><strong>Género:</strong> {user.gender}</p>
-          <p><strong>Habilidades:</strong> {user.skills.join(", ") || "No specified"}</p>
-          <p><strong>Biografía:</strong> {user.bio}</p>
+          <p><strong>Age:</strong> {user.age || "No specified"}</p>
+          <p><strong>Education:</strong> {user.education}</p>
+          <p><strong>Gender:</strong> {user.gender}</p>
+          <p><strong>Skills:</strong> {user.skills.join(", ") || "No specified"}</p>
+          <p><strong>Bio:</strong> {user.bio}</p>
           <button onClick={handleEdit}>Edit</button>
           <button onClick={handleDelete}>Delete</button>
         </>
